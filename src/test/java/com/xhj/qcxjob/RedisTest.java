@@ -25,7 +25,7 @@ public class RedisTest {
     @Test
     public void setRedis() {
         template.opsForValue().set("string","12312312312");
-
+        System.out.println("11.10");
 //      template.opsForValue().set("json:user:name","weimin2");
     }
 
