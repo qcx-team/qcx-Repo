@@ -35,6 +35,7 @@ public class RedisTest {
     @Test
     public void getRedis() {
         System.out.println("string"+template.opsForValue().get("string"));
+        System.out.println("1116");
     }
 
 }
