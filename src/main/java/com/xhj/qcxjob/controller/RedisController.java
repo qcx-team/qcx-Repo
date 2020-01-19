@@ -33,6 +33,7 @@ public class RedisController {
     public String test(){
 //        System.out.println("string"+template.opsForValue().get("string"));
         System.out.println("本地没有Redis，敬请期待");
+
         return "ok";
     }
 
