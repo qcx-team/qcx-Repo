@@ -1,16 +1,13 @@
 package com.xhj.qcxjob.controller;
 
-import com.xhj.qcxjob.bean.TUser;
-import com.xhj.qcxjob.service.TUserSevice;
+import com.xhj.qcxjob.bean.UserInfo;
+import com.xhj.qcxjob.service.UserService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.print.attribute.IntegerSyntax;
 
 /**
  * @Author: WM
@@ -26,7 +23,7 @@ public class RedisController {
     private StringRedisTemplate template;
 
     @Autowired
-    private TUserSevice tUserSevice;
+    private UserService tUserSevice;
 
     @ApiOperation(value="redis获取value的测试", notes="")
     @GetMapping("/test")
@@ -39,8 +36,8 @@ public class RedisController {
 
     @ApiOperation(value="获取单个User对象信息", notes="")
     @GetMapping("/getUser")
-    public TUser getUserById(Integer id){
-        TUser user= tUserSevice.getUserById(id);
+    public UserInfo getUserById(Integer id){
+        UserInfo user= tUserSevice.getUserById(id);
         return user;
     }
 }

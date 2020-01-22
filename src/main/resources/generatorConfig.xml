@@ -9,7 +9,7 @@
 			<property name="suppressAllComments" value="true"/>
 		</commentGenerator>
 		<!-- 数据库连接信息 -->
-		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/mysql?characterEncoding=utf8" userId="root" password="root"></jdbcConnection>
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://121.43.167.206:3306/qcxservice?characterEncoding=utf8" userId="root" password="qcxjob20"></jdbcConnection>
 		<!-- 默认false，把jdbc decimal 和numeric类型解析为Integer，为true时把jdbc decimal numeric类型解析为java.math.BigDecimal -->
 		<javaTypeResolver>
 			<property name="forceBigDecimals" value="false"/>
@@ -30,8 +30,13 @@
 		<javaClientGenerator targetPackage="com.xhj.qcxjob.mapper" type="XMLMAPPER" targetProject="./src/main/java">
 			<property name="enableSubPackages" value="false"/>
 		</javaClientGenerator>
+
+		<!--不生成帮助类（Exmaples）
+		 enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"
+		 -->
+
 		<!-- 指定数据库表 -->
-		<table tableName="t_user"></table>
+		<table tableName="user_info" ></table>
 		<!--<table tableName="task_list"></table>-->
 		<!--<table tableName="user"></table>-->
 		<!--<table tableName="sina_account"></table>-->
